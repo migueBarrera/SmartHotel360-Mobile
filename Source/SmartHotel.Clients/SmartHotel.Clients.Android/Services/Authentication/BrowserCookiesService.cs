@@ -9,7 +9,7 @@ namespace SmartHotel.Clients.Droid.Services.Authentication
     {
         public Task ClearCookiesAsync()
         {
-            var context = Android.App.Application.Context;
+            var context = MainActivity.Context;
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.LollipopMr1)
             {

@@ -99,7 +99,7 @@ namespace SmartHotel.Clients.Droid.Renderers
 
             var d = new List<Drawable>();
             var image = await GetBitmap(element.BackgroundImage);
-            d.Add(new BitmapDrawable(image));
+            d.Add(new BitmapDrawable(MainActivity.Context.Resources, image));
             var layer = new LayerDrawable(d.ToArray());
             layer.SetLayerInset(d.Count - 1, 0, 0, 0, 0);
             Control?.SetBackground(layer);

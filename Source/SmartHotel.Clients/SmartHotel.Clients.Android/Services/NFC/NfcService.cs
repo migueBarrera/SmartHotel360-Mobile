@@ -12,7 +12,7 @@ namespace SmartHotel.Clients.Droid.Services.NFC
 
         public NfcService()
         {
-            var activity = ((Activity)Xamarin.Forms.Forms.Context);
+            var activity = ((Activity)MainActivity.Context);
             nfcDevice = NfcAdapter.GetDefaultAdapter(activity);
         }
 

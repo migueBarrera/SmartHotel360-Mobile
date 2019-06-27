@@ -28,12 +28,16 @@ namespace SmartHotel.Clients.Droid
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : FormsAppCompatActivity
     {
+        public static Context Context { get; internal set; }
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+
+            Context = this;
 
             Forms.Init(this, bundle);
             CarouselViewRenderer.Init();
